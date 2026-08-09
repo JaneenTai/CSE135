@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>05 · Flex centering</title>
+  <link rel="stylesheet" href="./styles/vars.css">
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/site.css">
+  <!--
+    FLEX CENTERING
+    The body is a flex container filling the viewport (min-height: 100svh).
+    justify-content centers its child on the main axis (horizontal here)
+    and align-items centers it on the cross axis (vertical) — perfect
+    centering in three lines, the problem floats never solved.
+  -->
+  <style>
+    body {
+      --card-width: 28rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100svh;
+      padding: var(--space-3);
+
+      main {
+        max-width: var(--card-width);
+        padding: var(--space-3);
+        border: var(--border);
+        border-block-start: var(--rule);
+        background: var(--panel);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>404 ERROR</h1>
+    <p>Sorry, that page doesn't exist!</p>
+  </main>
+</body>
+</html>
