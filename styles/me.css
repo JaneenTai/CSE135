@@ -1,0 +1,31 @@
+body {
+    --figure-width: 11rem;
+    --figure-height: 24rem;
+
+    max-width: var(--measure);
+    margin-inline: auto;
+    padding: var(--space-3);
+
+    h1::after {
+        content: "☕";
+    }
+
+    article {
+        figure {
+            float: left;
+            width: var(--figure-width);
+            min-height: var(--figure-height);
+            margin: 0 var(--space-2) var(--space-1) 0;
+            padding: var(--space-2);
+            border: var(--border);
+            background: var(--panel);
+        }
+    }
+
+    >footer {
+        clear: both;
+        padding: var(--space-2);
+        border-block-start: var(--rule);
+        background: var(--panel);
+    }
+}

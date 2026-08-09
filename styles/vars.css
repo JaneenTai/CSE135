@@ -1,0 +1,47 @@
+/* Design tokens only — no layout, no selectors beyond :root. */
+:root {
+    /* color */
+    --ink: #7A59B3;
+    --paper: #DFD3EB;
+    --panel: #eff6ff;
+    --accent: #A471BD;
+    --flair: #6BAB90;
+
+    /*
+  --ink: #b35969;
+  --paper: #ead3e8;
+  --panel: #eff6ff;
+  --accent: #bc7671;
+
+  --flair: #F0C808; yellow
+  --flair: #E2C044 gold mustard
+  --flair: #6BAB90; teal green
+  --flair: #4B644A; forest green
+  --flair: #4B7F52 fern green
+  --flair: #A8763E copper brown
+  --flair: #5C415D grape
+  */
+
+    /* space */
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 2rem;
+    --space-4: 4rem;
+
+    /* border */
+    --border-style: solid;
+    --border-width: 1px;
+    --rule-width: 4px;
+    --underline-width: 2px;
+    --border: var(--border-width) var(--border-style) var(--ink);
+    --rule: var(--rule-width) var(--border-style) var(--accent);
+
+    /* type */
+    --text-s: 0.875rem;
+    --text-m: 1rem;
+    --text-l: 1.5rem;
+    --text-xl: 2.25rem;
+
+    /* line length */
+    --measure: 62ch;
+}

@@ -1,0 +1,22 @@
+nav {
+    li {
+        display: inline;
+        list-style-type: none;
+        padding: .3rem .1rem .3rem .5rem;
+        /* background-color: var(--panel); 
+        border: 1px solid var(--ink); */
+        width: 150px;
+    }
+}
+
+section {
+    border: 2px solid var(--ink);
+    background-color: var(--panel);
+    padding: 1rem .1rem 1rem .5rem;
+    margin: 1rem .1rem 1rem .5rem;
+}
+
+img {
+    max-width: 12rem;
+    max-height: 12rem;
+}
