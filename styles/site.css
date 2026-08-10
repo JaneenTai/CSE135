@@ -9,6 +9,12 @@ nav {
     }
 }
 
+
+h1::before, h1::after {
+    content: "🪻";
+}
+
+
 section {
     border: 2px solid var(--ink);
     background-color: var(--panel);
