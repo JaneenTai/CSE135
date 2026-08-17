@@ -1,0 +1,20 @@
+@import "vars.css";
+
+body {
+  background-color: var(--paper);
+}
+
+section {
+  display: flex;
+  background-color: #ececec;
+  padding: 12px 16px;
+
+  .column {
+    flex: 1; /* equal width columns */
+    padding: 0 16px;
+  }
+}
+
+label, select {
+  margin: .5rem;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echo Tester</title>
+  <link rel="stylesheet" href="styles/vars.css">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="form.js" defer></script>
+  <!--
+    FLEX CENTERING
+    The body is a flex container filling the viewport (min-height: 100svh).
+    justify-content centers its child on the main axis (horizontal here)
+    and align-items centers it on the cross axis (vertical) — perfect
+    centering in three lines, the problem floats never solved.
+  -->
+  <style>
+    body {
+      --card-width: 28rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100svh;
+      padding: var(--space-3);
+
+      main {
+        max-width: var(--card-width);
+        padding: var(--space-3);
+        border: var(--border);
+        border-block-start: var(--rule);
+        background: var(--panel);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Echo Tester</h1>
+    <hr>
+
+    <form id="echo-form">
+      <!-- language -->
+      <label for="language">Language: </label>
+      <select id="language">
+        <option value="perl">Perl</option>
+        <option value="php">PHP</option>
+        <option value="node">Node.js</option>
+        <option value="python">Python</option>
+      </select><br>
+
+      <!-- method -->
+      <label for="method">Method: </label>
+      <select id="method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <!-- <option value="PUT">PUT</option> -->
+        <!-- <option value="DELETE">DELETE</option> -->
+      </select><br>
+
+      <!-- encoding -->
+      <label for="encoding">Encoding: </label>
+      <select id="encoding">
+        <option value="urlencoded">x-www-form-urlencoded</option>
+        <option value="app-json">application/json</option>
+      </select><br>
+
+      <!-- message -->
+      <!-- Extra Data -->
+      <label for="query">Enter query string: </label>
+      <input type="text" name="query" id="query"><hr>
+
+      <input type="submit">
+    </form>
+    
+  </main>
+</body>
+</html>
