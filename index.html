@@ -1,73 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Home page">
-  <title>Home</title>
-  <link rel="stylesheet" href="./styles/vars.css">
-  <link rel="stylesheet" href="./styles/global.css">
-  <link rel="stylesheet" href="./styles/site.css">
-  <link rel="stylesheet" href="./styles/index.css">
-  <link rel="icon" href="favicon.ico">
-  <!--
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Home page" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./styles/vars.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/site.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="icon" href="favicon.ico" />
+    <!--
     FLEX PAGE SCAFFOLD
     The body is a flex column at least as tall as the viewport. Header and
     footer take their natural height; main has flex: 1, so it grows to
     absorb the leftover space and pushes the footer to the bottom even
     when the content is short.
-  -->
+  --></head>
 
-</head>
+  <body>
+    <header>
+      <h1>CSE 135 Summer 2026</h1>
+    </header>
 
-<body>
-  <header>
-    <h1>CSE 135 Summer 2026</h1>
-  </header>
+    <main>
+      <h2>Team</h2>
+      <nav>
+        <ul>
+          <li><a href="me.html">Janeen</a></li>
+        </ul>
+      </nav>
 
-  <main>
-    <h2>Team</h2>
-    <nav>
-      <ul>
-        <li><a href="me.html">Janeen</a></li>
-      </ul>
-    </nav>
+      <section>
+        <h2>Homework 1</h2>
+        <ul>
+          <li><a href="/hw1/hello.php">PHP</a></li>
+          <li><a href="/hw1/report.html">Analytics</a></li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Homework 1</h2>
-      <ul>
-        <li><a href="/hw1/hello.php">PHP</a></li>
-        <li><a href="/hw1/report.html">Analytics</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Homework 2</h2>
-      <div class="column">
+      <section>
+        <h2>Homework 2</h2>
+        <div class="column">
           <h2>Perl</h2>
           <ul>
             <li><a href="cgi-bin/perl-hello-html-world.pl">Hello, Perl!</a></li>
-            <li><a href="cgi-bin/perl-hello-json-world.pl">Hello, Perl! (JSON)</a></li>
+            <li>
+              <a href="cgi-bin/perl-hello-json-world.pl">Hello, Perl! (JSON)</a>
+            </li>
             <li><a href="cgi-bin/perl-env-pm.pl">Environment Variables</a></li>
             <li><a href="cgi-bin/perl-get-echo.pl">GET Echo</a></li>
             <li><a href="cgi-bin/perl-post-echo.pl">POST Echo</a></li>
+            <li><a href="cgi-bin/perl-general-echo.pl">General Echo</a></li>
           </ul>
         </div>
-        <h2>PHP</h2>
-        <ul>
-          <li><a href="cgi-bin/hello-html-php.php">Hello, PHP!</a></li>
-          <li><a href="cgi-bin/hello-json-php.php">Hello, PHP! (JSON)</a></li>
-        </ul>
-    </section>
+        <div class="column">
+          <h2>PHP</h2>
+          <ul>
+            <li><a href="cgi-bin/hello-html-php.php">Hello, PHP!</a></li>
+            <li><a href="cgi-bin/hello-json-php.php">Hello, PHP! (JSON)</a></li>
+            <li><a href="cgi-bin/environment-php.php">Environment Variables</a></li>
+            <!-- <li><a href="cgi-bin/echo-php.php">General Echo</a></li> -->
+            <!-- <li><a href="cgi-bin/state-php.php">State</a></li> -->
+          </ul>
+        </div>
+        <div class="column">
+          <h2>Node.js</h2>
+          <ul>
+            <li>Hello, Node.js!</li>
+            <li>Hello, Node.js! (JSON)</li>
+            <!-- <li><a href="cgi-bin/environment-php.php">Environment Variables</a></li> -->
+            <!-- <li><a href="cgi-bin/echo-nodejs.js">General Echo</a></li> -->
+          </ul>
+        </div>
+        <div class="column">
+          <h2>Python</h2>
+          <ul>
+            <li>Hello, Python!</li> <!-- <a href="cgi-bin/hello-html-python.py"></a> -->
+            <li>Hello, Python! (JSON)</li> <!-- <a href="cgi-bin/hello-json-python.py"></a> -->
+            <!-- <li><a href="cgi-bin/environment-python.py">Environment Variables</a></li> -->
+            <!-- <li><a href="cgi-bin/echo-python.py">General Echo</a></li> -->
+          </ul>
+        </div>
+      </section>
 
-    <section>
-      <h2>Analytics App</h2>
-    </section>
+      <section>
+        <h2>Analytics App</h2>
+      </section>
+    </main>
 
-  </main>
-
-  <footer>A simple homepage made with &hearts; by Janeen Taitingfong 2026</footer>
-</body>
-
+    <footer>
+      A simple homepage made with &hearts; by Janeen Taitingfong 2026
+    </footer>
+  </body>
 </html>
