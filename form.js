@@ -7,7 +7,7 @@ form.addEventListener('submit', async function (event) {
     const queryString = document.getElementById('query').value;
 
     if(method == 'GET'){
-        fetch('/cgi-bin/mypage.pl')
+        fetch('cgi-bin/perl-general-echo.pl')
         .then(response => response.text())
         .then(html => {
             document.getElementById('container').innerHTML = html;
