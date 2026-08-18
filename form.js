@@ -11,13 +11,15 @@ function sendRequest() {
     }
 
     const endpoints = {
-        perl: "cgi-bin/perl-general-echo.pl",
-        php: "cgi-bin/echo-php.php",
-        node: "cgi-bin/echo-node.js",
-        python: "cgi-bin/echo-python.py",
+        perl: "../cgi-bin/perl-general-echo.pl",
+        php: "../cgi-bin/echo-php.php",
+        node: "../cgi-bin/echo-node.js",
+        python: "../cgi-bin/echo-python.py",
     };
 
     const url = endpoints[language];
+
+    console.log(url);
 
     // always-valid query string, independent of body encoding
     const queryString =
@@ -27,6 +29,8 @@ function sendRequest() {
 
     const options = { method };
     let requestUrl = url;
+
+    console.log(requestUrl);
 
     if (method === "GET") {
         // GET: no body, no Content-Type header needed
