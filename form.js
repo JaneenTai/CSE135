@@ -1,47 +1,43 @@
 function sendRequest() {
-    // save values from the form
     const language = document.getElementById("language").value;
     const method = document.getElementById("method").value.toUpperCase();
     const encoding = document.getElementById("encoding").value;
     const message = document.getElementById("body-msg").value.trim();
     const extraText = document.getElementById("query").value.trim();
 
-    // check required field
     if (message === "") {
         alert("Message field is required.");
         return;
     }
 
-    // keep track of the endpoints/code
     const endpoints = {
         perl: "cgi-bin/perl-general-echo.pl",
         php: "cgi-bin/echo-php.php",
-        node: "cgi-bin/echo-nodejs.js",
+        node: "cgi-bin/echo-node.js",
         python: "cgi-bin/echo-python.py",
     };
 
     const url = endpoints[language];
 
-    // check encoding selected -> build request body from that
-    let body;
-    if (encoding === "application/json") {
-        body = JSON.stringify({ message: message, "extra-text": extraText });
-    } else {
-        body =
-            "message=" +
-            encodeURIComponent(message) +
-            (extraText !== "" ? "&extra-text=" + encodeURIComponent(extraText) : "");
-    }
+    // always-valid query string, independent of body encoding
+    const queryString =
+        "message=" +
+        encodeURIComponent(message) +
+        (extraText !== "" ? "&extra-text=" + encodeURIComponent(extraText) : "");
 
-    const options = { method: method, headers: { "Content-Type": encoding } };
+    const options = { method };
     let requestUrl = url;
 
-    // If the method is GET, append the body as query parameters
-    // Else if method is POST, PUT or DELETE, send the body in the request
     if (method === "GET") {
-        requestUrl += "?" + body;
+        // GET: no body, no Content-Type header needed
+        requestUrl += "?" + queryString;
     } else {
-        options.body = body;
+        // POST/PUT/DELETE: body shaped by the chosen encoding
+        options.headers = { "Content-Type": encoding };
+        options.body =
+            encoding === "application/json"
+                ? JSON.stringify({ message: message, "extra-text": extraText })
+                : queryString;
     }
 
     fetch(requestUrl, options)
