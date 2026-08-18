@@ -11,10 +11,10 @@ function sendRequest() {
     }
 
     const endpoints = {
-        perl: "../cgi-bin/perl-general-echo.pl",
-        php: "../cgi-bin/echo-php.php",
-        node: "../cgi-bin/echo-node.js",
-        python: "../cgi-bin/echo-python.py",
+        perl: "/cgi-bin/perl-general-echo.pl",
+        php: "/cgi-bin/echo-php.php",
+        node: "/cgi-bin/echo-node.js",
+        python: "/cgi-bin/echo-python.py",
     };
 
     const url = endpoints[language];
