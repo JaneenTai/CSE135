@@ -3,8 +3,8 @@ function sendRequest() {
     const language = document.getElementById("language").value;
     const method = document.getElementById("method").value.toUpperCase();
     const encoding = document.getElementById("encoding").value;
-    const message = document.getElementById("message").value.trim();
-    const extraText = document.getElementById("extra-text").value.trim();
+    const message = document.getElementById("body-msg").value.trim();
+    const extraText = document.getElementById("query").value.trim();
 
     // check required field
     if (message === "") {
@@ -16,7 +16,7 @@ function sendRequest() {
     const endpoints = {
         perl: "cgi-bin/perl-general-echo.pl",
         php: "cgi-bin/echo-php.php",
-        nodejs: "cgi-bin/echo-nodejs.js",
+        node: "cgi-bin/echo-nodejs.js",
         python: "cgi-bin/echo-python.py",
     };
 
