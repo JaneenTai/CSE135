@@ -1,3 +1,8 @@
+document.getElementById("echo-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // stop the browser's native page reload
+    sendRequest();
+});
+
 function sendRequest() {
     const language = document.getElementById("language").value;
     const method = document.getElementById("method").value.toUpperCase();
