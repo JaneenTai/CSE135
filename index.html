@@ -18,6 +18,21 @@
     when the content is short.
   --></head>
 
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-W7SFM2VZBL"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-W7SFM2VZBL");
+  </script>
+
   <body>
     <header>
       <h1>CSE 135 Summer 2026</h1>
@@ -41,12 +56,15 @@
 
       <section>
         <h2>Homework 2</h2>
-        <li><a href="echo-form.html">Echo Form Tester</a></li><hr>
+        <li><a href="echo-form.html">Echo Form Tester</a></li>
+        <hr />
         <div class="column">
           <h2>Perl</h2>
           <ul>
             <li><a href="cgi-bin/perl-hello-html-world.pl">Hello, Perl!</a></li>
-            <li><a href="cgi-bin/perl-hello-json-world.pl">Hello, Perl! (JSON)</a></li>
+            <li>
+              <a href="cgi-bin/perl-hello-json-world.pl">Hello, Perl! (JSON)</a>
+            </li>
             <li><a href="cgi-bin/perl-env-pm.pl">Environment Variables</a></li>
             <li><a href="cgi-bin/perl-general-echo.pl">General Echo</a></li>
           </ul>
@@ -56,7 +74,9 @@
           <ul>
             <li><a href="cgi-bin/hello-html-php.php">Hello, PHP!</a></li>
             <li><a href="cgi-bin/hello-json-php.php">Hello, PHP! (JSON)</a></li>
-            <li><a href="cgi-bin/environment-php.php">Environment Variables</a></li>
+            <li>
+              <a href="cgi-bin/environment-php.php">Environment Variables</a>
+            </li>
             <li><a href="cgi-bin/echo-php.php">General Echo</a></li>
             <!-- <li><a href="cgi-bin/state-php.php">State</a></li> -->
           </ul>
@@ -65,17 +85,27 @@
           <h2>Node.js</h2>
           <ul>
             <li><a href="cgi-bin/hello-html-node.js">Hello, Node.js!</a></li>
-            <li><a href="cgi-bin/hello-json-node.js">Hello, Node.js! (JSON)</a></li>
-            <li><a href="cgi-bin/environment-node.js">Environment Variables</a></li>
+            <li>
+              <a href="cgi-bin/hello-json-node.js">Hello, Node.js! (JSON)</a>
+            </li>
+            <li>
+              <a href="cgi-bin/environment-node.js">Environment Variables</a>
+            </li>
             <li><a href="cgi-bin/echo-node.js">General Echo</a></li>
           </ul>
         </div>
         <div class="column">
           <h2>Python</h2>
           <ul>
-            <li><a href="cgi-bin/hello-html-python.py">Hello, Python!</a></li> <!-- <a href="cgi-bin/hello-html-python.py"></a> -->
-            <li> <a href="cgi-bin/hello-json-python.py">Hello, Python! (JSON)</a></li> <!-- <a href="cgi-bin/hello-json-python.py"></a> -->
-            <li><a href="cgi-bin/environment-python.py">Environment Variables</a></li>
+            <li><a href="cgi-bin/hello-html-python.py">Hello, Python!</a></li>
+            <!-- <a href="cgi-bin/hello-html-python.py"></a> -->
+            <li>
+              <a href="cgi-bin/hello-json-python.py">Hello, Python! (JSON)</a>
+            </li>
+            <!-- <a href="cgi-bin/hello-json-python.py"></a> -->
+            <li>
+              <a href="cgi-bin/environment-python.py">Environment Variables</a>
+            </li>
             <li><a href="cgi-bin/echo-python.py">General Echo</a></li>
           </ul>
         </div>
